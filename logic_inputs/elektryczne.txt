@@ -1,0 +1,386 @@
+IF [Smell smoke/burning] OR [See sparks] OR [Feel heat on wires]
+THEN:
+  1. SHUT OFF main battery switch IMMEDIATELY
+  2. If AC involved: Disconnect shore power/inverter
+  3. Use fire extinguisher if needed
+  4. Let system cool 15 minutes
+  5. Proceed with caution
+IF [No lights, no instruments, no sounds anywhere]
+THEN:
+  1. CHECK: Battery switch position
+     * Is it ON? → If NO: Turn ON
+     * Is it ON but nothing works? → Proceed
+     
+  2. CHECK: Obvious physical damage
+     * Look for disconnected wires at switch
+     * Check if main fuse looks burnt (visibly black/melted)
+     * Smell for burnt electronics odor
+     
+  3. CHECK: Battery connections
+     * Are terminals tight? Try to wiggle by hand
+     * Visible corrosion? (White/green powder)
+     
+  4. EMERGENCY BYPASS (if safe):
+     * Connect heavy wire from battery positive to main panel input
+     * Use jumper cables if available
+     * IF system works → Bad switch or connection
+     * IF still dead → Battery problem
+     
+  5. BATTERY SWAP TEST:
+     * Switch to other battery bank if available
+     * Parallel batteries if switch has BOTH position
+     * IF works → Original battery dead1.           TEST: Battery voltage (touch probes to battery posts)
+   * <10V → Battery dead
+   * 10-12V → Low but should power something
+   * >12V → Battery OK
+   
+2. FOLLOW THE VOLTAGE:
+   * Test at battery switch INPUT side → Should match battery
+   * Test at battery switch OUTPUT side → Should match if switch ON
+   * Test at main panel main lug → Should have voltage
+   
+3. VOLTAGE DROP CHECK:
+   * Connect one probe to battery NEGATIVE post
+   * Other probe to engine block → Should be 0V
+   * If voltage >0.5V → Bad engine ground
+IF [Some lights work but others don't] OR [Instruments dead but cabin lights work]
+THEN:
+
+1. IDENTIFY PATTERN:
+   * Everything on one side dead? → Check distribution panel fuses
+   * All instruments dead? → Check instrument power bus
+   * Individual circuit dead? → Isolate that circuit
+
+2. NO-TOOL CIRCUIT TESTING:
+   * Find working circuit on same panel
+   * Swap fuses between working and dead circuit
+   * IF dead circuit works with good fuse → Replace fuse
+   * IF still dead → Problem in wiring or load
+
+3. VISUAL INSPECTION:
+   * Check for loose wires at panel
+   * Look for corrosion on fuse holders
+   * Follow wiring from panel to first connection
+
+4. SIMPLE CONTINUITY TEST (with wire/battery):
+   * Remove fuse from dead circuit
+   * Connect wire from known good +12V to load side of fuse holder
+   * IF device works → Problem between panel and fuse
+   * IF doesn't work → Problem in device or downstream wiring
+IF [Bilge pump doesn't run] AND [Bilge has water]
+THEN:
+  1. MANUAL OVERRIDE:
+     * Find manual switch (usually at panel)
+     * Hold switch ON, listen for hum/vibration
+     
+  2. DIRECT POWER TEST:
+     * Disconnect pump wires
+     * Touch directly to battery terminals
+     * IF runs → Problem in wiring/switch
+     * IF doesn't run → Pump motor dead
+     
+  3. FLOAT SWITCH TEST:
+     * Manually lift float
+     * Listen for click from switch
+     * Bypass switch with wire to test
+IF [Bilge pump doesn't run] AND [Bilge has water]
+THEN:
+  1. MANUAL OVERRIDE:
+     * Find manual switch (usually at panel)
+     * Hold switch ON, listen for hum/vibration
+     
+  2. DIRECT POWER TEST:
+     * Disconnect pump wires
+     * Touch directly to battery terminals
+     * IF runs → Problem in wiring/switch
+     * IF doesn't run → Pump motor dead
+     
+  3. FLOAT SWITCH TEST:
+     * Manually lift float
+     * Listen for click from switch
+     * Bypass switch with wire to test
+IF [Running lights not working]
+THEN:
+  1. CHECK BOTH SIDES:
+     * Port, starboard, and stern all out? → Check main nav light fuse/switch
+     * Only one side out? → Check bulb and socket
+     
+  2. BULB TEST:
+     * Swap with known good bulb from cabin light
+     * Check for corrosion in socket
+     
+  3. QUICK FIX OFFSHORE:
+     * Use flashlight with colored plastic
+     * Rig LED camping light temporarily
+     * Handhold spotlight on required color
+IF [Works sometimes, fails other times]
+THEN ASK:
+  1. WHEN does it fail?
+     * When heeled over → Loose connection or low battery fluid
+     * In rough seas → Vibration-related loose wire
+     * After rain/damp → Moisture in connection
+     * When warm/hot → Thermal expansion issue
+     
+  2. TAPPING TEST:
+     * While working, gently tap along circuit
+     * Start at device, work back to panel
+     * If fails when tapped → Loose connection there
+     
+  3. WIGGLE TEST:
+     * Wiggle wires at connections
+     * Flex wiring runs
+     * Move switches/controls
+IF [Fails only when motoring or in rough seas]
+THEN:
+  1. CHECK:
+     * Battery terminals (tighten with wrench if available)
+     * Main ground connections
+     * Engine alternator connections
+     
+  2. TEMPORARY FIX:
+     * Tie-wrap loose wiring
+     * Stuff rags to prevent chafing
+     * Use tape to secure connections
+IF [Batteries not charging while engine running]
+THEN:
+
+1. VISUAL CHECKS:
+   * Alternator belt intact? (Look for broken belt)
+   * Belt tight? (Should depress about 1/2 inch)
+   * Alternator wires connected?
+   
+2. SIMPLE VOLTAGE COMPARISON:
+   * Note brightness of lights with engine OFF
+   * Start engine, increase RPM to 1500
+   * Lights should get slightly brighter
+   * If no change → No charging
+   
+3. ALTERNATOR TEST (if ammeter available):
+   * Turn ON all loads (lights, instruments)
+   * Start engine, watch ammeter
+   * Should show charge (needle to + side)
+   
+4. EMERGENCY FIELD EXCITATION (for old alternators):
+   * Find small wire on alternator (usually labeled "FLD" or "F")
+   * Momentarily touch to battery positive
+   * If alternator starts charging → Regulator problem
+   * WARNING: Don't hold wire on positive
+IF [Batteries die quickly] OR [Won't hold charge]
+THEN:
+
+1. SIMPLE LOAD TEST:
+   * Turn on cabin lights (several)
+   * Watch brightness over 30 minutes
+   * If dim quickly → Poor battery
+   
+2. EQUALIZATION CHECK (flooded batteries):
+   * Check each cell fluid level
+   * Top up with DISTILLED water only
+   * If cells show different levels → Battery failing
+   
+3. PARASITIC DRAW DETECTION:
+   * Turn EVERYTHING OFF
+   * Listen for any relays clicking
+   * Feel for warm wires/boxes
+   * Disconnect suspicious circuits one by one
+   
+4. OFFSHORE BATTERY MANAGEMENT:
+   * Use one battery for engine start only
+   * Use other for house loads
+   * Charge with engine when needed
+   * Conserve power: LED lights only, minimize electronics
+IF [Chartplotter/Instruments dead]
+THEN:
+
+1. POWER CHECK:
+   * Is unit getting power? (Look for LED lights)
+   * Check fuse at unit or power cable
+   * Swap fuse with known good one
+   
+2. RESET PROCEDURES:
+   * Power OFF unit completely
+   * Disconnect from power for 2 minutes
+   * Reconnect and power ON
+   
+3. NETWORK ISSUES (NMEA):
+   * If one instrument works but others don't → Network issue
+   * Check connections between units
+   * Ensure terminators are in place
+   
+4. BACKUP NAVIGATION:
+   * Use handheld GPS
+   * Paper charts and dead reckoning
+   * Celestial navigation if trained
+IF [After lightning storm, things stopped working]
+THEN:
+
+1. IMMEDIATE ACTIONS:
+   * Check all crew OK
+   * Look for hull damage
+   * Check through-hulls for leaks
+   
+2. SYSTEM ASSESSMENT:
+   * Disconnect ALL electronics from power
+   * Test each separately with direct power
+   * Start with safety equipment first (VHF, EPIRB)
+   
+3. PRIORITY ORDER:
+   1. VHF Radio (emergency communications)
+   2. GPS (position knowledge)
+   3. Navigation lights
+   4. Bilge pumps
+   5. Everything else
+IF [Saltwater splash on electronics] OR [Found corrosion]
+THEN:
+
+1. IMMEDIATE RESPONSE:
+   * Rinse with FRESH water if available
+   * If not, use alcohol from first aid kit
+   * DO NOT apply power until dry
+   
+2. DRYING PROCEDURE:
+   * Place in rice if available (food supply)
+   * Use silica gel from medicine bottles
+   * Sun dry if possible
+   * Wait 24-48 hours before testing
+   
+3. CORROSION CLEANING (no tools):
+   * Use vinegar from galley to neutralize
+   * Scrub with toothbrush
+   * Rinse with fresh water
+   * Dry completely
+IF [Suspect broken wire]
+THEN:
+
+1. FIND THE BREAK:
+   * Flex wire along its length
+   * Look for cracked insulation
+   * Feel for abrupt changes in flexibility
+   
+2. SIMPLE CONTINUITY TEST:
+   * Strip both ends of wire
+   * Connect to small battery (AA)
+   * Other end to small bulb
+   * If lights → Wire good
+   * If not → Wire broken
+   
+3. TEMPORARY REPAIR:
+   * Strip back to good wire
+   * Twist ends together tightly
+   * Wrap with electrical tape (multiple layers)
+   * Keep dry and protected
+IF [Fuse keeps blowing]
+THEN:
+
+1. FIND THE CAUSE:
+   * What was turned ON when it blew?
+   * Any new equipment installed?
+   * Any signs of short (smoke, sparks)?
+   
+2. ISOLATION TEST:
+   * Disconnect load from circuit
+   * Replace fuse
+   * If blows immediately → Short in wiring
+   * If holds → Problem in load device
+   
+3. OFFSHORE FUSE SUBSTITUTES:
+   * Aluminum foil (TEMPORARY only!)
+   * Paper clip (very temporary)
+   * Smaller wire than circuit (not recommended)
+   * Better: Use fuse from non-essential circuit
+1. VOLTMETER: Use 12V bulb with two wires
+2. CONTINUITY TESTER: Battery + bulb + wires
+3. WIRE STRIPPER: Knife or teeth (carefully)
+4. CRIMPER: Pliers and hammer
+5. INSULATION: Electrical tape, heat shrink from other wires
+6. CORROSION CLEANER: Vinegar, baking soda, freshwater
+7. TEST LOAD: 12V bulb from running light
+1. BROKEN SWITCH:
+   * Bypass with direct wire
+   * Use alligator clips temporarily
+   * Make switch from two screwdrivers
+
+2. CORRODED TERMINAL:
+   * Clean with sandpaper, knife edge, scrub pad
+   * Coat with petroleum jelly (from first aid)
+   * Wrap with aluminum foil for better contact
+
+3. SHORTED WIRE:
+   * Cut out damaged section
+   * Splice with wire from non-essential circuit
+   * Tape every inch for insulation
+
+4. FAILED CONNECTOR:
+   * Strip wires and twist together
+   * Tape thoroughly
+   * Keep away from metal and water
+SEQUENCE:
+1. SAFETY SYSTEMS:
+   * Bilge pumps (manual then electric)
+   * Navigation lights (emergency lighting)
+   * VHF radio (emergency communications)
+
+2. NAVIGATION SYSTEMS:
+   * GPS/chartplotter
+   * Compass (always works)
+   * Depth sounder (for grounding avoidance)
+
+3. PROPULSION SYSTEMS:
+   * Engine starting
+   * Steering
+   * Sails (always work)
+
+4. COMFORT SYSTEMS:
+   * Cabin lights
+   * Refrigeration
+   * Entertainment
+IF [Batteries low and charging system failed]
+THEN:
+
+1. POWER DOWN:
+   * Turn OFF everything non-essential
+   * Use LED headlamps at night
+   * Hand pump bilge if needed
+
+2. SCHEDULE ENGINE RUNNING:
+   * Run engine 1 hour morning, 1 hour evening
+   * Charge batteries during engine run
+   * Do all high-power tasks during engine run
+
+3. ALTERNATIVE POWER:
+   * Solar panels if available
+   * Wind generator if equipped
+   * Tow generator if materials available
+START: Something electrical doesn't work
+
+STEP 1: Check power source
+   * Battery switch ON? → If NO, turn ON
+   * Other things working? → If YES, isolated problem
+   * Everything dead? → Battery/main feed issue
+
+STEP 2: Check protection device
+   * Fuse looks OK? → If NO, replace
+   * Circuit breaker tripped? → Reset once
+   * If blows/trips immediately → Short circuit
+
+STEP 3: Check connections
+   * Wiggle wires at both ends
+   * Look for corrosion
+   * Check for loose terminals
+
+STEP 4: Isolate the problem
+   * Does it work with direct power?
+   * Does it work with known good component?
+   * When did it stop working?
+
+STEP 5: Emergency repair
+   * Bypass if safe
+   * Improvise solution
+   * Conserve/adapt until port
+1. PERFECTION IS THE ENEMY OF GOOD: Get it working, not perfect
+2. SAFETY OVER CONVENIENCE: Don't risk fire for comfort
+3. DOCUMENT WHAT YOU DO: For proper repair later
+4. TEST AFTER EVERY REPAIR: Before declaring fixed
+5. HAVE BACKUP FOR CRITICAL SYSTEMS: Always
+6. WHEN IN DOUBT, ISOLATE: Disconnect problematic circuits
+7. CONSERVE REMAINING SYSTEMS: Don't lose everything fixing one thing

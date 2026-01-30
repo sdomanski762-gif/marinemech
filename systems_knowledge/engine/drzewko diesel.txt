@@ -1,0 +1,207 @@
+[SYSTEM NAME] Marine Diesel Engine – Expert Diagnostic Logic Tree
+ID: diesel_engine_core
+
+=== START NODE ===
+Node ID: engine_problem
+Question (PL): Jaki jest główny objaw pracy silnika?
+Question (EN): What is the main engine symptom?
+Answers:
+  1. Silnik nie odpala / Engine does not start -> Next Node: no_start
+  2. Odpala i gaśnie / Starts and stalls -> Next Node: starts_stalls
+  3. Brak mocy lub nierówna praca / Low power or rough running -> Next Node: low_power
+  4. Nietypowy dym z wydechu / Unusual exhaust smoke -> Next Node: smoke_type
+
+=== NODES ===
+
+Node ID: no_start
+Question (PL): Czy rozrusznik kręci silnikiem?
+Question (EN): Does the starter crank the engine?
+Answers:
+  1. Nie / No -> Solution ID: no_crank_power
+  2. Tak / Yes -> Next Node: cranks_no_start
+  3. Nie wiem / nie mogę sprawdzić / I don't know / can't check -> Next Node: electrical_assumption
+
+---
+
+Node ID: electrical_assumption
+Question (PL): Czy po przekręceniu kluczyka gasną kontrolki lub słychać kliknięcie?
+Question (EN): Do warning lights dim or do you hear a click when turning the key?
+Answers:
+  1. Tak / Yes -> Solution ID: no_crank_power
+  2. Nie / No -> Solution ID: no_crank_power
+  3. Nie wiem / nie mogę sprawdzić / I don't know / can't check -> Solution ID: no_crank_power
+
+---
+
+Node ID: cranks_no_start
+Question (PL): Czy silnik wykazuje próbę zapłonu?
+Question (EN): Does the engine attempt to fire?
+Answers:
+  1. Nie, kręci „na pusto” / No, cranks freely -> Solution ID: no_fuel_or_air
+  2. Tak, próbuje odpalić / Yes, tries to start -> Solution ID: poor_combustion_conditions
+  3. Nie wiem / nie mogę ocenić / I don't know / can't tell -> Solution ID: no_fuel_or_air
+
+---
+
+Node ID: starts_stalls
+Question (PL): Po jakim czasie silnik gaśnie?
+Question (EN): How quickly does the engine stall?
+Answers:
+  1. Po kilku sekundach / After a few seconds -> Solution ID: restricted_fuel_flow
+  2. Po rozgrzaniu / After warming up -> Solution ID: fuel_vent_or_overheat
+  3. Nie wiem / różnie / I don't know / varies -> Solution ID: restricted_fuel_flow
+
+---
+
+Node ID: low_power
+Question (PL): Czy problem narasta stopniowo?
+Question (EN): Does the problem worsen gradually?
+Answers:
+  1. Tak / Yes -> Solution ID: air_or_fuel_restriction
+  2. Nie, nagle / No, suddenly -> Solution ID: turbo_or_injector_issue
+  3. Nie wiem / trudno ocenić / I don't know / hard to tell -> Solution ID: air_or_fuel_restriction
+
+---
+
+Node ID: smoke_type
+Question (PL): Jaki jest kolor dymu?
+Question (EN): What is the color of the smoke?
+Answers:
+  1. Czarny / Black -> Solution ID: black_smoke
+  2. Biały / White -> Solution ID: white_smoke
+  3. Niebieski / Blue -> Solution ID: blue_smoke
+  4. Nie wiem / słaba widoczność / I don't know / poor visibility -> Solution ID: poor_combustion_conditions
+
+=== SOLUTIONS ===
+
+Solution ID: no_crank_power
+Title (PL): Brak zasilania rozrusznika
+Title (EN): No starter power
+Description (PL):
+Najbardziej prawdopodobna przyczyna (≈75%). W warunkach marine brak kręcenia niemal zawsze oznacza problem elektryczny, nawet jeśli użytkownik nie może tego potwierdzić.
+Description (EN):
+Most likely cause (~75%). In marine conditions, no cranking almost always indicates an electrical issue, even if it cannot be confirmed.
+Steps:
+  1. Sprawdź napięcie akumulatora.
+  2. Sprawdź masę i klemy.
+  3. Sprawdź główny wyłącznik baterii.
+
+---
+
+Solution ID: no_fuel_or_air
+Title (PL): Brak paliwa lub zapowietrzenie układu
+Title (EN): No fuel or air in the system
+Description (PL):
+Domyślna przyczyna przy kręceniu bez zapłonu (≈80%). Przy braku pewności zawsze zakłada się problem z paliwem.
+Description (EN):
+Default cause when cranking without firing (~80%). When uncertain, fuel issues are assumed.
+Steps:
+  1. Sprawdź zawory paliwa.
+  2. Sprawdź filtr paliwa.
+  3. Odpowietrz układ.
+
+---
+
+Solution ID: poor_combustion_conditions
+Title (PL): Niewłaściwe warunki spalania
+Title (EN): Poor combustion conditions
+Description (PL):
+Używane jako fallback (≈65%), gdy nie da się jednoznacznie ocenić objawów.
+Description (EN):
+Used as a fallback (~65%) when symptoms cannot be clearly assessed.
+Steps:
+  1. Sprawdź jakość paliwa.
+  2. Sprawdź wtryski.
+  3. Uwzględnij temperaturę i kompresję.
+
+---
+
+Solution ID: restricted_fuel_flow
+Title (PL): Ograniczony przepływ paliwa
+Title (EN): Restricted fuel flow
+Description (PL):
+Najczęstsza przyczyna gaśnięcia bez danych pomiarowych (≈70%).
+Description (EN):
+Most common cause of stalling without measurements (~70%).
+Steps:
+  1. Wymień filtr paliwa.
+  2. Sprawdź przewody.
+  3. Sprawdź odpowietrzenie zbiornika.
+
+---
+
+Solution ID: fuel_vent_or_overheat
+Title (PL): Odpowietrzenie zbiornika lub przegrzewanie
+Title (EN): Tank venting or overheating issue
+Description (PL):
+Stosowane gdy brak danych, ale objaw zależny od czasu (≈60%).
+Description (EN):
+Used when time-dependent symptoms exist but data is limited (~60%).
+Steps:
+  1. Sprawdź odpowietrzenie zbiornika.
+  2. Sprawdź układ chłodzenia.
+
+---
+
+Solution ID: air_or_fuel_restriction
+Title (PL): Ograniczony dopływ powietrza lub paliwa
+Title (EN): Restricted air or fuel supply
+Description (PL):
+Bezpieczne zawężenie przy braku wiedzy użytkownika (≈60%).
+Description (EN):
+Safe narrowing when user knowledge is limited (~60%).
+Steps:
+  1. Sprawdź filtry.
+  2. Sprawdź dolot.
+
+---
+
+Solution ID: turbo_or_injector_issue
+Title (PL): Awaria turbiny lub wtryskiwacza
+Title (EN): Turbocharger or injector failure
+Description (PL):
+Mniej prawdopodobne, ale istotne przy nagłej utracie mocy (≈55%).
+Description (EN):
+Less likely but relevant for sudden power loss (~55%).
+Steps:
+  1. Sprawdź doładowanie.
+  2. Sprawdź wtryski.
+
+---
+
+Solution ID: black_smoke
+Title (PL): Zbyt bogata mieszanka
+Title (EN): Over-fuelling
+Description (PL):
+Czarny dym nawet bez pewności użytkownika (≈75%).
+Description (EN):
+Black smoke even without user certainty (~75%).
+Steps:
+  1. Sprawdź dolot.
+  2. Sprawdź wtryski.
+
+---
+
+Solution ID: white_smoke
+Title (PL): Niespalone paliwo
+Title (EN): Unburnt fuel
+Description (PL):
+Częste przy zimnym silniku i niepewnych obserwacjach (≈65%).
+Description (EN):
+Common on cold engines and uncertain observations (~65%).
+Steps:
+  1. Sprawdź temperaturę.
+  2. Sprawdź kompresję.
+
+---
+
+Solution ID: blue_smoke
+Title (PL): Spalanie oleju
+Title (EN): Oil burning
+Description (PL):
+Rzadkie, ale jednoznaczne nawet przy ograniczonej obserwacji (≈70%).
+Description (EN):
+Rare but clear even with limited observation (~70%).
+Steps:
+  1. Sprawdź pierścienie.
+  2. Sprawdź prowadnice zaworów.

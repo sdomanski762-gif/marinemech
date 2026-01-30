@@ -1,0 +1,237 @@
+SYSTEM: Engine / Diesel
+BRANCH: Power loss under load – primary diagnostic path
+
+QUESTION_en:
+Does the engine lose power only when load is applied (e.g. accelerating or motoring into waves)?
+
+QUESTION_pl:
+Czy silnik traci moc tylko pod obciążeniem (np. przy przyspieszaniu lub płynięciu pod fale)?
+
+ANSWER_1_en:
+Yes, power loss appears only under load
+
+ANSWER_1_pl:
+Tak, utrata mocy pojawia się tylko pod obciążeniem
+
+ANSWER_1_EFFECT:
+confirm
+
+ANSWER_1_NEXT_TYPE:
+node
+
+ANSWER_1_NEXT_ID:
+PLU_Q2
+
+ANSWER_2_en:
+No, power loss is present even at idle
+
+ANSWER_2_pl:
+Nie, brak mocy występuje również na biegu jałowym
+
+ANSWER_2_EFFECT:
+exclude
+
+ANSWER_2_NEXT_TYPE:
+terminate
+
+ANSWER_2_NEXT_ID:
+SOL_IDLE_POWER_LOSS
+
+ANSWER_3_en:
+I am not sure / cannot assess
+
+ANSWER_3_pl:
+Nie jestem pewien / nie mogę ocenić
+
+ANSWER_3_EFFECT:
+cant_check
+
+ANSWER_3_NEXT_TYPE:
+node
+
+ANSWER_3_NEXT_ID:
+PLU_Q2
+
+
+QUESTION_en:
+PLU_Q2: Is there visible black smoke from the exhaust when power drops?
+
+QUESTION_pl:
+PLU_Q2: Czy w momencie utraty mocy z wydechu pojawia się czarny dym?
+
+ANSWER_1_en:
+Yes, black smoke is visible under load
+
+ANSWER_1_pl:
+Tak, pod obciążeniem widać czarny dym
+
+ANSWER_1_EFFECT:
+confirm
+
+ANSWER_1_NEXT_TYPE:
+terminate
+
+ANSWER_1_NEXT_ID:
+SOL_AIR_EXHAUST_RESTRICTION
+
+ANSWER_2_en:
+No black smoke, exhaust looks normal
+
+ANSWER_2_pl:
+Nie, brak czarnego dymu, wydech wygląda normalnie
+
+ANSWER_2_EFFECT:
+exclude
+
+ANSWER_2_NEXT_TYPE:
+node
+
+ANSWER_2_NEXT_ID:
+PLU_Q3
+
+ANSWER_3_en:
+I cannot see the exhaust clearly
+
+ANSWER_3_pl:
+Nie mogę dobrze ocenić wydechu
+
+ANSWER_3_EFFECT:
+cant_check
+
+ANSWER_3_NEXT_TYPE:
+node
+
+ANSWER_3_NEXT_ID:
+PLU_Q3
+
+
+QUESTION_en:
+PLU_Q3: Does the engine recover power immediately when throttle is reduced?
+
+QUESTION_pl:
+PLU_Q3: Czy po zmniejszeniu gazu silnik natychmiast odzyskuje moc?
+
+ANSWER_1_en:
+Yes, power returns as soon as load is reduced
+
+ANSWER_1_pl:
+Tak, po zmniejszeniu obciążenia moc wraca od razu
+
+ANSWER_1_EFFECT:
+confirm
+
+ANSWER_1_NEXT_TYPE:
+terminate
+
+ANSWER_1_NEXT_ID:
+SOL_FUEL_SUPPLY_RESTRICTION
+
+ANSWER_2_en:
+No, power does not recover quickly
+
+ANSWER_2_pl:
+Nie, moc nie wraca szybko
+
+ANSWER_2_EFFECT:
+exclude
+
+ANSWER_2_NEXT_TYPE:
+node
+
+ANSWER_2_NEXT_ID:
+PLU_Q4
+
+ANSWER_3_en:
+I am not sure
+
+ANSWER_3_pl:
+Nie jestem pewien
+
+ANSWER_3_EFFECT:
+cant_check
+
+ANSWER_3_NEXT_TYPE:
+node
+
+ANSWER_3_NEXT_ID:
+PLU_Q4
+
+
+QUESTION_en:
+PLU_Q4: Is engine temperature rising abnormally during power loss?
+
+QUESTION_pl:
+PLU_Q4: Czy podczas utraty mocy temperatura silnika wyraźnie rośnie?
+
+ANSWER_1_en:
+Yes, temperature increases abnormally
+
+ANSWER_1_pl:
+Tak, temperatura wyraźnie rośnie
+
+ANSWER_1_EFFECT:
+terminate
+
+ANSWER_1_NEXT_TYPE:
+solution
+
+ANSWER_1_NEXT_ID:
+SOL_COOLING_FAILURE_SAFETY
+
+ANSWER_2_en:
+No, temperature remains normal
+
+ANSWER_2_pl:
+Nie, temperatura pozostaje normalna
+
+ANSWER_2_EFFECT:
+confirm
+
+ANSWER_2_NEXT_TYPE:
+terminate
+
+ANSWER_2_NEXT_ID:
+SOL_PROPELLER_OVERLOAD
+
+ANSWER_3_en:
+I cannot verify temperature
+
+ANSWER_3_pl:
+Nie mogę sprawdzić temperatury
+
+ANSWER_3_EFFECT:
+cant_check
+
+ANSWER_3_NEXT_TYPE:
+terminate
+
+ANSWER_3_NEXT_ID:
+SOL_COOLING_FAILURE_SAFETY
+
+
+SOLUTION_ID:
+SOL_AIR_EXHAUST_RESTRICTION
+
+SOLUTION_TITLE_en:
+Air intake or exhaust restriction causing power loss
+
+SOLUTION_TITLE_pl:
+Ograniczony dolot powietrza lub zatkany wydech
+
+SOLUTION_DESC_en:
+Black smoke under load indicates insufficient air or exhaust restriction. The engine cannot burn fuel efficiently and loses power.
+
+SOLUTION_DESC_pl:
+Czarny dym pod obciążeniem wskazuje na niedobór powietrza lub zatkany wydech, co powoduje utratę mocy.
+
+STEP_1_en:
+Reduce engine load immediately.
+
+STEP_1_pl:
+Natychmiast zmniejsz obciążenie silnika.
+
+STEP_2_en:
+Inspect air filter and exhaust outlet for blockage before continuing.
+
+STEP_2_pl:
+Sprawdź filtr powietrza i wylot wydechu pod kątem zatkania przed dalszą żeglugą.

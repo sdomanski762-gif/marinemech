@@ -1,0 +1,429 @@
+BEFORE ANY WORK:
+1. Turn OFF battery switch
+2. Remove winch control pendant
+3. Chock wheels if on trailer
+4. Ensure no load on winch
+5. Wear gloves (winches pinch!)
+6. Keep clear of drum under power
+BEFORE ANY WORK:
+1. Turn OFF battery switch
+2. Remove winch control pendant
+3. Chock wheels if on trailer
+4. Ensure no load on winch
+5. Wear gloves (winches pinch!)
+6. Keep clear of drum under power
+
+LOGIC PATH:
+IF [No sound at all when switch pressed]
+THEN:
+
+1. CHECK POWER AVAILABILITY:
+   * Listen: Other 12V devices working? (Lights, radio)
+   * If other devices dead → Check main battery/battery switch
+   * If other devices work → Winch-specific problem
+
+2. NO-TOOL VOLTAGE CHECK:
+   * Find main winch power cables (usually heavy red/black)
+   * Are they securely connected to battery?
+   * Check for obvious corrosion/disconnection
+
+3. SIMPLE JUMPER TEST:
+   * Disconnect winch positive cable from battery
+   * Momentarily touch to battery positive
+   * Look for small spark (indicates draw)
+   * Listen for solenoid "click"
+   * IF spark/click → Winch has internal power
+   * IF no spark → Open circuit in winch
+
+4. CONTROL PENDANT CHECK:
+   * Try different control if available
+   * Bypass pendant: Touch winch motor wires directly
+   * IF winch runs with direct power → Pendant/switch problem
+   * IF still dead → Winch motor or solenoid problem
+
+5. SOLENOID CHECK (listen for click):
+   * Have someone press switch while ear near winch
+   * Should hear distinct "CLICK" from solenoid
+   * No click? → Solenoid or control circuit problem
+   * Clicks but no movement? → Motor or connection problem
+LOGIC PATH:
+IF [Motor hums/runs but drum doesn't turn]
+THEN:
+
+1. IDENTIFY SOUND TYPE:
+   * Loud buzzing/humming? → Stalled motor or mechanical jam
+   * Normal running sound? → Gear train disconnect
+   * Grinding noise? → Stripped gears
+
+2. NO-LOAD TEST:
+   * Disconnect load from winch
+   * Try to run with no load
+   * IF runs without load → Overloaded or mechanical bind
+   * IF still doesn't turn → Internal mechanical failure
+
+3. MANUAL OVERRIDE CHECK:
+   * Most winches have manual override clutch
+   * Engage/disengage clutch several times
+   * Try different clutch positions
+   * Listen/feel for engagement
+
+4. EMERGENCY MANUAL OPERATION:
+   * Insert winch handle (if equipped)
+   * Can you turn manually?
+   * If won't turn manually → Seized bearings or gears
+   * If turns manually → Motor/gear coupling failure
+LOGIC PATH:
+IF [Works in but not out] OR [Works out but not in]
+THEN:
+
+1. CONTROL SWITCH TEST:
+   * Swap direction switch if detachable
+   * Test both directions at winch motor terminals
+   * Direct power to motor terminals:
+     - Connect + to A, - to B = one direction
+     - Connect + to B, - to A = opposite direction
+   * IF both directions work with direct power → Control problem
+   * IF only one direction works → Motor or solenoid problem
+
+2. SOLENOID LOGIC:
+   * Two-direction winches have two solenoids
+   * Listen for BOTH solenoids clicking
+   * One direction clicks, other silent? → Bad solenoid or control
+   * Both click? → Motor connection problem
+
+3. SIMPLE SOLENOID BYPASS:
+   * Find the two main motor terminals
+   * To test IN: Jump battery + to one terminal, - to other
+   * To test OUT: Reverse the connections
+   * Wear gloves - sparks will occur!
+
+LOGIC PATH:
+IF [Winch runs but lacks power/speed]
+THEN:
+
+1. VOLTAGE DROP CHECK (critical for winches):
+   * Observe lights when winch running
+   * Lights dim severely? → Battery problem or undersized cables
+   * Lights stay bright? → Winch internal problem
+
+2. CABLE RESISTANCE CHECK:
+   * Feel battery cables while winching
+   * Warm/hot cables? → Undersized or corroded
+   * Feel winch motor housing
+   * Extremely hot? → Overheating motor
+
+3. LOAD ASSESSMENT:
+   * Is load heavier than normal?
+   * Is winch angle changed? (more friction)
+   * Is rope/layer binding?
+
+4. LAYER MANAGEMENT CHECK:
+   * First layer on drum has most power
+   * Multiple layers reduce power 30-50%
+   * Rewind to single layer if possible
+LOGIC PATH:
+IF [Winch gets very hot] OR [Breaker trips/fuse blows]
+THEN:
+
+1. DUTY CYCLE CHECK:
+   * Most winches: 5 minutes ON, 15 minutes OFF
+   * Have you been winching continuously?
+   * Let cool completely (30+ minutes)
+
+2. AMP DRAW ESTIMATION:
+   * No ammeter? Use light dimming method:
+     - With winch OFF: Note light brightness
+     - Start winching: Observe dimming
+     - Severe dimming = high draw
+     - Moderate dimming = normal draw
+
+3. MECHANICAL BINDING CHECK:
+   * Disconnect load, run winch free
+   * Still trips breaker? → Winch problem
+   * Doesn't trip? → Load or mounting problem
+
+4. BEARING CHECK:
+   * Lift load slightly, spin drum by hand
+   * Should spin freely with slight resistance
+   * Grinding/stiff rotation? → Bad bearings
+LOGIC PATH:
+IF [Rapid clicking sound from winch]
+THEN:
+
+1. BATTERY VOLTAGE CHECK:
+   * Clicking solenoid = low voltage
+   * Check battery state of charge
+   * Start engine to boost voltage
+
+2. CONNECTION RESISTANCE:
+   * Check ALL connections in winch circuit:
+     - Battery terminals
+     - Main power lugs
+     - Ground connections
+   * Clean any corrosion found
+
+3. SOLENOID HOLD-IN POWER:
+   * Some solenoids have separate hold circuits
+   * If main contacts make but won't stay → Hold circuit problem
+   * Temporary fix: Hold switch manually (carefully!)
+LOGIC PATH:
+IF [Rapid clicking sound from winch]
+THEN:
+
+1. BATTERY VOLTAGE CHECK:
+   * Clicking solenoid = low voltage
+   * Check battery state of charge
+   * Start engine to boost voltage
+
+2. CONNECTION RESISTANCE:
+   * Check ALL connections in winch circuit:
+     - Battery terminals
+     - Main power lugs
+     - Ground connections
+   * Clean any corrosion found
+
+3. SOLENOID HOLD-IN POWER:
+   * Some solenoids have separate hold circuits
+   * If main contacts make but won't stay → Hold circuit problem
+   * Temporary fix: Hold switch manually (carefully!)
+LOGIC PATH:
+IF [Remote doesn't work] OR [Switch intermittent]
+THEN:
+
+1. CONTROL TYPE IDENTIFICATION:
+   * Wired pendant? → Check cable continuity
+   * Wireless remote? → Check batteries
+   * Deck-mounted switch? → Check for water ingress
+
+2. SIMPLE CONTINUITY TEST:
+   * For wired controls:
+     - Disconnect at winch end
+     - Press switch, check continuity between wires
+     - Should show continuity when pressed
+   * For 5-pin common winch plugs:
+     - Pin 1: Ground
+     - Pin 2: Out
+     - Pin 3: In
+     - Pin 4: Not used
+     - Pin 5: +12V
+
+3. WATER INGRESS:
+   * Submerged switch/control?
+   * Dry thoroughly (rice bag if available)
+   * Spray with corrosion inhibitor if available
+IF [Solenoid failed but motor OK]
+THEN:
+  1. Identify main motor terminals (large studs)
+  2. Create manual switch:
+     - Two heavy screwdrivers
+     - Insulated handles
+     - Touch battery + to one terminal
+     - Touch battery - to other terminal
+     - REVERSE for opposite direction
+  3. EXTREME CAUTION: Heavy sparks, wear gloves
+  4. Only for emergency retrieval
+OFFSHORE CLEANING METHODS:
+1. Abrasive options:
+   * Sandpaper (from tool kit)
+   * Knife edge scraping
+   * Coins for rubbing
+   * Rough coral/sandstone (last resort)
+
+2. Chemical options:
+   * Vinegar (acetic acid dissolves corrosion)
+   * Coke (phosphoric acid)
+   * Baking soda paste (neutralize after)
+
+3. Protective coating:
+   * Petroleum jelly
+   * Light grease
+   * Even cooking oil temporarily
+HEAVY GAUGE WINCH WIRE:
+1. If copper strands broken:
+   * Strip back insulation
+   * Twist strands together TIGHTLY
+   * Fold back, twist again
+   * Tape thoroughly
+
+2. If terminal broken:
+   * Strip wire, wrap around bolt
+   * Add washers, tighten
+   * Tape for insulation
+
+3. TEMPORARY CABLE REPLACEMENT:
+   * Use jumper cables as winch cables
+   * Use multiple smaller wires in parallel
+   * Keep connections clean and tight
+IF [Mechanically bound/stuck]
+THEN:
+  1. Manual override attempt
+  2. Tap gear housing with hammer (not too hard!)
+  3. Penetrating oil if available (WD-40, cooking oil)
+  4. Apply power in BOTH directions briefly
+  5. Last resort: Disassemble if possible
+1. POWER INPUT:
+   - Heavy red cable (+)
+   - Heavy black cable (-) to frame/battery
+
+2. SOLENOID PACK:
+   - Usually mounted on winch or nearby
+   - 2-4 solenoids in a box
+   - Small control wires to switch
+
+3. MOTOR:
+   - Cylindrical, often with cooling fins
+   - Two large terminals
+   - Ground through mounting
+
+4. GEAR TRAIN:
+   - Between motor and drum
+   - Reduction gears (50:1 to 200:1)
+   - Clutch mechanism
+
+5. CONTROL:
+   - Plug receptacle (5-pin round common)
+   - Remote cord or wireless receiver
+Looking at plug (pins toward you):
+1: Black - Ground
+2: Blue/Green - Out
+3: Red/White - In
+4: Not used
+5: Yellow - +12V from solenoid
+
+CONTROL SWITCH WIRING:
+Up position: Connects 5 to 3 (In)
+Down position: Connects 5 to 2 (Out)
+Center: All open
+POWER FLOW:
+Battery + → Main fuse → Solenoid 1 → Motor terminal A
+Battery + → Main fuse → Solenoid 2 → Motor terminal B
+Motor case → Ground
+
+CONTROL:
+Switch applies +12V to solenoid coil
+Solenoid closes, connects power to motor
+TYPICAL 12V WINCH:
+No load: 10-20 amps
+50% load: 50-100 amps
+Rated load: 150-400 amps
+Stalled: 400-600 amps (trips breaker)
+
+WIRE SIZING MINIMUM:
+0-50A: 8 AWG
+50-100A: 6 AWG
+100-150A: 4 AWG
+150-200A: 2 AWG
+200-300A: 1/0 AWG
+TYPICAL 12V WINCH:
+No load: 10-20 amps
+50% load: 50-100 amps
+Rated load: 150-400 amps
+Stalled: 400-600 amps (trips breaker)
+
+WIRE SIZING MINIMUM:
+0-50A: 8 AWG
+50-100A: 6 AWG
+100-150A: 4 AWG
+150-200A: 2 AWG
+200-300A: 1/0 AWG
+DAILY OFFSHORE CHECK:
+1. Visual inspection for corrosion
+2. Check mounting bolts tight
+3. Listen for unusual noises
+4. Test both directions briefly
+
+WEEKLY:
+1. Clean electrical contacts
+2. Check cable condition
+3. Lubricate exposed gears (if applicable)
+4. Test clutch operation
+
+POST-SALTWATER USE:
+1. Rinse with fresh water
+2. Spray with corrosion inhibitor
+3. Exercise winch to dry internals
+4. Check electrical connections
+1. MANUAL METHODS:
+   * Use snatch block to double line
+   * Use cockpit winches if available
+   * Use anchor windlass if powerful enough
+   * Hand-over-hand pull with gloves
+
+2. MECHANICAL ADVANTAGE:
+   * Block and tackle from spare line
+   * Spanish windlass (twisted rope)
+   * Vehicle assist if near shore
+   * Tide/wait if situation allows
+
+3. PREVENTIVE MEASURE:
+   * Always have manual backup plan
+   * Know maximum manual pull capacity
+   * Have recovery straps/lines available
+START: Winch problem
+
+STEP 1: Safety check
+   * Load secured? → YES
+   * Power OFF? → YES
+   * Gloves on? → YES
+
+STEP 2: Symptom identification
+   * No sound at all? → Go to Power Circuit
+   * Clicks but no movement? → Go to Solenoid/Motor
+   * Runs but no pull? → Go to Mechanical
+   * One direction only? → Go to Control Circuit
+   * Slow/weak? → Go to Power Supply
+
+STEP 3: Power circuit check
+   * Battery voltage OK? → Test at winch terminals
+   * Connections tight/clean? → Clean if needed
+   * Control signal present? → Test at solenoid
+
+STEP 4: Control circuit check
+   * Switch continuity? → Test with multimeter or bulb
+   * Solenoid click? → Listen or feel
+   * Voltage to motor? → Test at motor terminals
+
+STEP 5: Mechanical check
+   * Free spin manually? → Check clutch
+   * Any obstruction? → Visual inspection
+   * Gear engagement? → Feel for resistance
+
+STEP 6: Repair or bypass
+   * Can it be fixed with available tools?
+   * Can it be bypassed for emergency?
+   * Can load be moved manually?
+1. BASIC:
+   * Adjustable wrench
+   * Screwdrivers (flat, Phillips)
+   * Pliers (regular, needle-nose)
+   * Wire cutters/strippers
+
+2. WINCH-SPECIFIC:
+   * Pin punch (for gear pins)
+   * Snap ring pliers (if internal)
+   * Breaker bar (for stubborn bolts)
+
+3. IMPROVISED:
+   * Hammer (gear unsticking)
+   * Pry bar (clutch disengagement)
+   * Multimeter or test light
+   * Jumper wires with alligator clips
+1. SYMPTOM:
+   * What exactly happens
+   * When it started
+   * What were conditions (wet, cold, etc.)
+
+2. TESTS PERFORMED:
+   * Voltage measurements
+   * Continuity checks
+   * Visual findings
+
+3. TEMPORARY FIXES:
+   * What was done
+   * How long it worked
+   * What failed next
+
+4. PARTS NEEDED:
+   * Specific replacement parts
+   * Tools required
+   * Special instructions

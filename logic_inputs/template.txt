@@ -1,0 +1,28 @@
+SYSTEM:
+BRANCH:
+QUESTION_en:
+QUESTION_pl:
+ANSWER_1_en:
+ANSWER_1_pl:
+ANSWER_1_EFFECT: confirm|exclude|escalate|terminate|cant_check
+ANSWER_1_NEXT_TYPE: node|solution
+ANSWER_1_NEXT_ID:
+ANSWER_2_en:
+ANSWER_2_pl:
+ANSWER_2_EFFECT: confirm|exclude|escalate|terminate|cant_check
+ANSWER_2_NEXT_TYPE: node|solution
+ANSWER_2_NEXT_ID:
+ANSWER_3_en:
+ANSWER_3_pl:
+ANSWER_3_EFFECT: confirm|exclude|escalate|terminate|cant_check
+ANSWER_3_NEXT_TYPE: node|solution
+ANSWER_3_NEXT_ID:
+SOLUTION_ID:
+SOLUTION_TITLE_en:
+SOLUTION_TITLE_pl:
+SOLUTION_DESC_en:
+SOLUTION_DESC_pl:
+STEP_1_en:
+STEP_1_pl:
+STEP_2_en:
+STEP_2_pl:
